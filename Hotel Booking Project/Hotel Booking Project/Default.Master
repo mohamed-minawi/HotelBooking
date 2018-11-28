@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Hotel_Booking_Project.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <style type="text/css">
+        .ratingStar
+        {
+            font-size: 0pt;
+            width: 13px;
+            height: 12px;
+            margin: 0px;
+            padding: 0px;
+            cursor: pointer;
+            display: block;
+            background-repeat: no-repeat;
+        }
+        .filledRatingStar
+        {
+            background-image: url(Images/FilledStar.png);
+        }
+        .emptyRatingStar
+        {
+            background-image: url(Images/EmptyStar.png);
+        }
+        .savedRatingStar
+        {
+            background-image: url(Images/SavedStar.png);
+        }
+</style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+              <img class="img-responsive" src="Images/Logo.png" href="Home.aspx" alt="Chania">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                
+                <div class="ml-auto">
+                   <!-- Every one of the following HTML buttons would need to be converted to proper ASP buttons -->
+                   <asp:Button id="b4" Text="Register your Property on Mitch" class="btn btn-light" runat="server" OnClick="b4_Click" />
+                   <asp:Button id="b5" Text="Register" class="btn btn-light" runat="server" OnClick="b5_Click" />
+                   <asp:Button id="b6" Text="Sign In" class="btn btn-light" runat="server" OnClick="b6_Click" />
+                </div>
+              </div>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
